@@ -52,6 +52,9 @@ totalCalculating = (a) => {
         if (event.target.value !== "") {
           document.getElementById(counterField).value = event.target.value;
           totalCalculating();
+        } else if (event.target.value === "") {
+          document.getElementById(counterField).value = 0;
+          totalCalculating();
         }
       });
   };
